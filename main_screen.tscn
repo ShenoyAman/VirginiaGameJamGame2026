@@ -1,0 +1,38 @@
+[gd_scene load_steps=2 format=3 uid="uid://dsgqd2x5b8rp3"]
+
+[ext_resource type="Script" uid="uid://b2x7etkrssdfq" path="res://main_screen.gd" id="1_tjn2e"]
+
+[node name="MainScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_tjn2e")
+
+[node name="PlayButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 112.0
+offset_top = 1045.0
+offset_right = 626.0
+offset_bottom = 1114.0
+text = "Play"
+
+[node name="QuitButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 109.0
+offset_top = 1182.0
+offset_right = 623.0
+offset_bottom = 1251.0
+text = "Quit"
+
+[node name="TitleLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 871.0
+offset_top = 371.0
+offset_right = 1769.0
+offset_bottom = 678.0
+theme_override_font_sizes/font_size = 55
+text = " A Mystery Game!!!!!!"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]

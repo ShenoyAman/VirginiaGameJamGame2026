@@ -11,8 +11,16 @@ config_version=5
 [application]
 
 config/name="Virginia Game Jam Game 2026"
-config/features=PackedStringArray("4.6", "Forward Plus")
+run/main_scene="uid://qws1ir3wwjk6"
+config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=2560
+window/size/viewport_height=1440
+window/size/mode=3
+window/stretch/mode="canvas_items"
 
 [dotnet]
 
