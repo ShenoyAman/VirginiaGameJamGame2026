@@ -6,6 +6,19 @@
 [ext_resource type="Texture2D" uid="uid://nfwyrrmae42d" path="res://assets/vic_2026_arrow_right_click.png" id="3_eatrc"]
 [ext_resource type="Script" uid="uid://dn7rwdg6mksu1" path="res://control_2room2rear.gd" id="5_ov3qq"]
 [ext_resource type="PackedScene" uid="uid://whdithdlah4j" path="res://InventoryUI.tscn" id="6_ov3qq"]
+[ext_resource type="Texture2D" uid="uid://bof2hcxx5o034" path="res://assets/vic_2026_cardreader2.png" id="7_3syra"]
+[ext_resource type="Texture2D" uid="uid://nsfifrfjrat0" path="res://assets/vic_2026_door_outside.png" id="7_7tc50"]
+[ext_resource type="Script" uid="uid://bjspgbt2b8i2q" path="res://exitdooarea2d.gd" id="8_0c4su"]
+[ext_resource type="Script" uid="uid://c7oj3nxag2tqj" path="res://exitdoorarea.gd" id="8_yr1r8"]
+[ext_resource type="Texture2D" uid="uid://cxaj5rb4xqvrp" path="res://assets/vic_2026_door_closed.png" id="9_ngmhj"]
+[ext_resource type="Script" uid="uid://db2he0dqx6it4" path="res://panelfordoor.gd" id="12_k0t4s"]
+[ext_resource type="Texture2D" uid="uid://b1ic6mdborefh" path="res://assets/vic_2026_cardreader.png" id="13_kckbi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f4we2"]
+size = Vector2(567, 886)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ucjs1"]
+size = Vector2(162, 213)
 
 [node name="Node2D" type="Node2D" unique_id=491032860]
 
@@ -67,3 +80,43 @@ flip_h = true
 metadata/_edit_use_anchors_ = true
 
 [node name="CanvasLayer" parent="." unique_id=1739160554 instance=ExtResource("6_ov3qq")]
+
+[node name="Vic2026Cardreader" type="Sprite2D" parent="." unique_id=1197985846]
+position = Vector2(1936, 720)
+texture = ExtResource("7_3syra")
+
+[node name="Area2D2" type="Area2D" parent="." unique_id=1923498054]
+script = ExtResource("8_yr1r8")
+
+[node name="Vic2026DoorOutside" type="Sprite2D" parent="Area2D2" unique_id=1291870581]
+position = Vector2(1353, 671)
+texture = ExtResource("7_7tc50")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=1041942556]
+position = Vector2(1346.5, 726)
+shape = SubResource("RectangleShape2D_f4we2")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=498251089]
+script = ExtResource("8_0c4su")
+
+[node name="Vic2026DoorClosed" type="Sprite2D" parent="Area2D" unique_id=278047768]
+position = Vector2(1354, 673)
+texture = ExtResource("9_ngmhj")
+
+[node name="Panel" type="Panel" parent="Area2D" unique_id=1456314371]
+offset_left = 957.0
+offset_top = 142.0
+offset_right = 1748.0
+offset_bottom = 1166.0
+script = ExtResource("12_k0t4s")
+
+[node name="Vic2026Cardreader" type="Sprite2D" parent="Area2D" unique_id=1688101259]
+position = Vector2(1936, 720)
+texture = ExtResource("13_kckbi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1457764333]
+position = Vector2(1854, 675.5)
+shape = SubResource("RectangleShape2D_ucjs1")
+
+[connection signal="input_event" from="Area2D2" to="Area2D2" method="_on_input_event"]
+[connection signal="input_event" from="Area2D" to="Area2D" method="_on_input_event"]
