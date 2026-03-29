@@ -4,12 +4,15 @@
 [ext_resource type="Texture2D" uid="uid://dlfbuakg58tyt" path="res://assets/IMG_8598.png" id="2_7a4el"]
 [ext_resource type="FontFile" uid="uid://b54fgs384lp87" path="res://Ravenscroft.ttf" id="3_7a4el"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_7a4el"]
+font_color = Color(0, 0, 0, 1)
+
 [sub_resource type="FontVariation" id="FontVariation_7a4el"]
 base_font = ExtResource("3_7a4el")
 
 [sub_resource type="LabelSettings" id="LabelSettings_kwhh3"]
 font = SubResource("FontVariation_7a4el")
-font_size = 100
+font_size = 150
 font_color = Color(0, 0, 0, 1)
 
 [node name="MainScreen" type="Control" unique_id=47787945]
@@ -20,6 +23,15 @@ script = ExtResource("1_w0p2i")
 [node name="Img8598" type="Sprite2D" parent="." unique_id=1835354990]
 position = Vector2(1282, 715)
 texture = ExtResource("2_7a4el")
+
+[node name="Label" type="Label" parent="." unique_id=1147141006]
+layout_mode = 0
+offset_left = 338.0
+offset_top = 337.0
+offset_right = 937.0
+offset_bottom = 506.0
+text = "By Matthew Brennan, April Moore, Sporesisters (Elaine), Aman Shnoi, Mu Ying"
+label_settings = SubResource("LabelSettings_7a4el")
 
 [node name="PlayButton" type="Button" parent="." unique_id=352328046]
 layout_mode = 0
@@ -39,10 +51,10 @@ text = "Quit"
 
 [node name="TitleLabel" type="Label" parent="." unique_id=1006323001]
 layout_mode = 0
-offset_left = 112.0
-offset_top = 126.0
-offset_right = 1158.0
-offset_bottom = 433.0
+offset_left = 114.0
+offset_top = 43.0
+offset_right = 1160.0
+offset_bottom = 350.0
 theme_override_font_sizes/font_size = 55
 text = "The Monster Mystery"
 label_settings = SubResource("LabelSettings_kwhh3")

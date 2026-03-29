@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://couua0an8s66t"]
+
+[ext_resource type="Texture2D" uid="uid://qadpgpmjqcrr" path="res://assets/IMG_8632.png" id="1_fb78i"]
+[ext_resource type="Script" uid="uid://d0vhohy2ojmfp" path="res://mirrorscene.gd" id="1_l3jpf"]
+
+[node name="Node2D" type="Node2D" unique_id=658508325]
+script = ExtResource("1_l3jpf")
+
+[node name="Img8632" type="Sprite2D" parent="." unique_id=461732535]
+position = Vector2(1284, 722)
+texture = ExtResource("1_fb78i")

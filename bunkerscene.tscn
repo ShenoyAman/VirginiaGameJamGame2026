@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://blnayq0l0b0tt"]
+
+[ext_resource type="Texture2D" uid="uid://cpexc2yispxqn" path="res://assets/IMG_8630.png" id="1_hwnsb"]
+[ext_resource type="Script" uid="uid://dfl5xh5woeiby" path="res://finalmirrorconnect.gd" id="2_3oaj3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bgkkg"]
+size = Vector2(360, 747)
+
+[node name="Node2D" type="Node2D" unique_id=655554681]
+
+[node name="Img8630" type="Sprite2D" parent="." unique_id=1073924145]
+position = Vector2(1276, 719)
+texture = ExtResource("1_hwnsb")
+
+[node name="Area2D2" type="Area2D" parent="." unique_id=287616411]
+script = ExtResource("2_3oaj3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=505178163]
+position = Vector2(1758, 602.5)
+shape = SubResource("RectangleShape2D_bgkkg")
+
+[connection signal="input_event" from="Area2D2" to="Area2D2" method="_on_input_event"]
