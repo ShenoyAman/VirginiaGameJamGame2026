@@ -10,13 +10,19 @@ config_version=5
 
 [application]
 
-config/name="Virginia Game Jam Game 2026"
+config/name="New Game Project"
+run/main_scene="uid://qws1ir3wwjk6"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[display]
+
+window/size/viewport_width=2560
+window/size/viewport_height=1440
+
 [dotnet]
 
-project/assembly_name="Virginia Game Jam Game 2026"
+project/assembly_name="New Game Project"
 
 [physics]
 
