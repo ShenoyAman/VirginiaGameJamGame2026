@@ -6,6 +6,13 @@ Wooden box lid opening and closing by Benjamin152 -- https://freesound.org/s/445
 
 Metal_push door open3.wav by pagancow -- https://freesound.org/s/15316/ -- License: Creative Commons 0
 
+Key:Swipe Card.wav by ryanharding95 -- https://freesound.org/s/272434/ -- License: Creative Commons 0
+
+
+SFX_Keys_Jiggle_02 by Al3x-K -- https://freesound.org/s/848699/ -- License: Creative Commons 0
+
+mab-clock-tick-20080713.wav by mab -- https://freesound.org/s/57206/ -- License: Attribution 3.0
+
 
 
 Recorded, produced and published by: Gregor Quendel
