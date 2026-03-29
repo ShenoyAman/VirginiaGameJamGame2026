@@ -5,7 +5,8 @@ extends Area2D
 
 func _ready():
 	input_pickable = true
-	
+	if InventoryManager.has_item("Key"):
+		visible = false
 
 func _on_input_event(_viewport, event, _shape_idx):
 	if event is InputEventMouseButton:

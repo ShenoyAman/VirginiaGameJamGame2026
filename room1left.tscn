@@ -12,6 +12,9 @@
 [ext_resource type="Texture2D" uid="uid://iualue1aq3to" path="res://assets/vic_2026_arrow_up_click.png" id="8_o5es1"]
 [ext_resource type="Texture2D" uid="uid://c4ny265du4y0u" path="res://assets/vic_2026_arrow_up_highlight.png" id="9_wlv3v"]
 [ext_resource type="PackedScene" uid="uid://whdithdlah4j" path="res://InventoryUI.tscn" id="12_o5es1"]
+[ext_resource type="Script" uid="uid://oy66n81oloy8" path="res://line_edit.gd" id="12_sj88d"]
+[ext_resource type="Texture2D" uid="uid://j3nca7wd1w0c" path="res://assets/vic_2026_pc_closed.png" id="12_wlv3v"]
+[ext_resource type="Script" uid="uid://db2he0dqx6it4" path="res://panelfordoor.gd" id="15_qn6b4"]
 
 [node name="Node2D" type="Node2D" unique_id=593777903]
 
@@ -82,10 +85,41 @@ texture_normal = ExtResource("7_lxjps")
 texture_pressed = ExtResource("8_o5es1")
 texture_hover = ExtResource("9_wlv3v")
 
-[node name="Vic2026DoorClosed" type="Sprite2D" parent="." unique_id=1386797310]
-visible = false
-position = Vector2(1999.9999, 781)
+[node name="CanvasLayer" parent="." unique_id=1739160554 instance=ExtResource("12_o5es1")]
+
+[node name="Vic2026PcClosed" type="Sprite2D" parent="." unique_id=1938353470]
+z_index = 1
+position = Vector2(1582, 799)
+texture = ExtResource("12_wlv3v")
+
+[node name="LineEdit" type="LineEdit" parent="." unique_id=2069753661]
+z_index = 2
+offset_left = 1427.0
+offset_top = 208.0
+offset_right = 1603.0
+offset_bottom = 266.0
+placeholder_text = "PIN"
+max_length = 3
+context_menu_enabled = false
+emoji_menu_enabled = false
+shortcut_keys_enabled = false
+middle_mouse_paste_enabled = false
+drag_and_drop_selection_enabled = false
+caret_blink = true
+caret_force_displayed = true
+secret = true
+script = ExtResource("12_sj88d")
+
+[node name="Panel" type="Panel" parent="LineEdit" unique_id=292675877]
+layout_mode = 0
+offset_left = 413.0
+offset_top = 823.0
+offset_right = 750.0
+offset_bottom = 982.0
+script = ExtResource("15_qn6b4")
+
+[node name="Vic2026DoorClosed" type="Sprite2D" parent="LineEdit" unique_id=1386797310]
+z_index = -2
+position = Vector2(572.9999, 573)
 scale = Vector2(0.77592576, 0.7851851)
 texture = ExtResource("6_pmoe4")
-
-[node name="CanvasLayer" parent="." unique_id=1739160554 instance=ExtResource("12_o5es1")]
