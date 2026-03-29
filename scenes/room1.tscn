@@ -9,7 +9,6 @@
 [ext_resource type="PackedScene" uid="uid://whdithdlah4j" path="res://InventoryUI.tscn" id="7_npsde"]
 [ext_resource type="Texture2D" uid="uid://blwv2o7ssf5s1" path="res://assets/IMG_8604.png" id="8_npsde"]
 [ext_resource type="Script" uid="uid://wmtdekyad1rl" path="res://scenes/area_2d_2.gd" id="9_3k0wu"]
-[ext_resource type="PackedScene" uid="uid://b71cx5shc2qk5" path="res://screwdriverpickup.tscn" id="9_ml6mh"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_277jj"]
 font_size = 61
@@ -78,9 +77,6 @@ texture_pressed = ExtResource("6_ml6mh")
 texture_hover = ExtResource("5_npsde")
 flip_h = true
 
-[node name="Area2D" parent="." unique_id=238413632 instance=ExtResource("9_ml6mh")]
-position = Vector2(1341, 1141)
-
 [node name="Area2D2" type="Area2D" parent="." unique_id=511166522]
 script = ExtResource("9_3k0wu")
 
@@ -93,5 +89,7 @@ texture = ExtResource("8_npsde")
 position = Vector2(764, 684)
 rotation = 0.15533431
 shape = SubResource("RectangleShape2D_kxjkn")
+
+[node name="CanvasLayer2" parent="." unique_id=955417772 instance=ExtResource("7_npsde")]
 
 [connection signal="input_event" from="Area2D2" to="Area2D2" method="_on_input_event"]
